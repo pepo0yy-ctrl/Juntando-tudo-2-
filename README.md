@@ -14,9 +14,6 @@ Debugging e Resolução de Problemas: Identificação de erros comuns de caminho
 ## 🏗️ Arquitetura do Projeto
 O projeto segue uma estrutura simples, ideal para iniciantes:
 
-text
-
-Copiar
 /projeto-ecafrio
 │
 ├── index.html          # Estrutura do site e lógica de conteúdo
