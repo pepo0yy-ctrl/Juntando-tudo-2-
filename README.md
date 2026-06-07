@@ -14,6 +14,16 @@ Debugging e Resolução de Problemas: Identificação de erros comuns de caminho
 ## 🏗️ Arquitetura do Projeto
 O projeto segue uma estrutura simples, ideal para iniciantes:
 
+## 📚 Tecnologias Utilizadas
+HTML5: Estrutura da página.
+CSS3 & W3.CSS: Estilização e responsividade (Framework educativo leve).
+JavaScript (ES6+): Lógica de interação (Sem jQuery ou frameworks pesados).
+Font Awesome 4.7: Ícones vetoriais.
+
+## 📄 Licença e Créditos
+Projeto desenvolvido para fins acadêmicos. Autor: [Pedro Henrique Oliveira de Abreu]
+
+
 ```text
 /projeto-ecafrio
 │
@@ -26,11 +36,4 @@ O projeto segue uma estrutura simples, ideal para iniciantes:
     ├── Ins_1.png       # Imagens do slideshow (Serviços)
     └── ...
 
-## 📚 Tecnologias Utilizadas
-HTML5: Estrutura da página.
-CSS3 & W3.CSS: Estilização e responsividade (Framework educativo leve).
-JavaScript (ES6+): Lógica de interação (Sem jQuery ou frameworks pesados).
-Font Awesome 4.7: Ícones vetoriais.
 
-## 📄 Licença e Créditos
-Projeto desenvolvido para fins acadêmicos. Autor: [Pedro Henrique Oliveira de Abreu]
