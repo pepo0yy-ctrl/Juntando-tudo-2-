@@ -14,7 +14,7 @@ Debugging e Resolução de Problemas: Identificação de erros comuns de caminho
 ## 🏗️ Arquitetura do Projeto
 O projeto segue uma estrutura simples, ideal para iniciantes:
 
-/projeto-ecafrio
+<bash>/projeto-ecafrio
 │
 ├── index.html          # Estrutura do site e lógica de conteúdo
 ├── README.md           # Documentação deste projeto
@@ -24,6 +24,7 @@ O projeto segue uma estrutura simples, ideal para iniciantes:
     ├── lg-logo.png     # Logos de parceiros
     ├── Ins_1.png       # Imagens do slideshow (Serviços)
     └── ...
+    </bash>
 ## 📚 Tecnologias Utilizadas
 HTML5: Estrutura da página.
 CSS3 & W3.CSS: Estilização e responsividade (Framework educativo leve).
