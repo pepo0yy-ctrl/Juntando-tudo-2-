@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECAFRIO - Climatização Premium</title>
+    <!-- Importando o Framework W3.CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Importando Ícones (Font Awesome) para redes sociais e UI -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+        /* Personalizações extras */
+        body, h1, h2, h3, h4, h5 {font-family: "Segoe UI", sans-serif}
+        
+        /* Ajuste da Sidebar */
+        .w3-sidebar {
+            z-index: 3;
+            width: 250px; 
+            top: 48px; 
+            bottom: 0;
+            height: inherit;
+            position: fixed; 
+        }
+
+        /* Ajuste do Conteúdo Principal */
+        .w3-main {
+            margin-left: 250px; 
+            margin-top: 48px; 
+            position: relative;
+            transition: margin-left .4s;
+        }
+
+        /* Botão de Menu */
+        .w3-bar-item {padding: 16px 16px;}
+        .w3-bar-item:hover {background-color: #008CBA;}
+        .w3-bar-item:hover > b {color: white;}
+
+        /* Media Query para telas menores (Mobile) */
+        @media screen and (max-width: 600px) {
+            .w3-sidebar {
+                width: 100%; 
+                height: auto;
+                position: relative; 
+                top: 0;
+            }
+            .w3-sidebar a {
+                font-size: 18px;
+            }
+            .w3-main {
+                margin-left: 0; 
+                width: 100%;
+            }
+            .w3-bar-item {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body class="w3-light-grey">
+
+<!-- Navegação Superior -->
+<nav class="w3-bar w3-blue w3-top w3-large" style="height: 48px;">
+    <div class="w3-bar-item w3-right">
+        <i class="fa fa-bars w3-hover-text-white" onclick="w3_open()"></i>
+    </div>
+    <div class="w3-bar-item w3-padding-large">
+        <i class="fa fa-snowflake-o"></i> <b>ECAFRIO</b> | Climatização Inteligente
+    </div>
+</nav>
+
+<!-- Sidebar / Menu Lateral -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" id="mySidebar">
+    <br>
+    <div class="w3-container">
+        <h4 class="w3-padding-large w3-text-blue"><b>MENU</b></h4>
+    </div>
+    <div class="w3-bar-block">
+        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-padding-large w3-hover-blue">
+            <i class="fa fa-home w3-margin-right"></i>HOME
+        </a>
+        <a href="#parceiros" onclick="w3_close()" class="w3-bar-item w3-button w3-padding-large w3-hover-blue">
+            <i class="fa fa-handshake-o w3-margin-right"></i>PARCEIROS
+        </a>
+        <a href="#servicos" onclick="w3_close()" class="w3-bar-item w3-button w3-padding-large w3-hover-blue">
+            <i class="fa fa-gears w3-margin-right"></i>SERVIÇOS
+        </a>
+        <a href="#faq" onclick="w3_close()" class="w3-bar-item w3-button w3-padding-large w3-hover-blue">
+            <i class="fa fa-question-circle w3-margin-right"></i>FAQ
+        </a>
+        <a href="#contato" onclick="w3_close()" class="w3-bar-item w3-button w3-padding-large w3-hover-blue">
+            <i class="fa fa-envelope w3-margin-right"></i>CONTATO
+        </a>
+    </div>
+</nav>
+
+<!-- Overlay para fechar menu no mobile -->
+<div class="w3-overlay" style="display:none;" onclick="w3_close()" id="myOverlay"></div>
+
+<!-- Conteúdo Principal -->
+<div class="w3-main" id="main-content">
+
+    <!-- SEÇÃO: HOME -->
+    <div class="w3-container" style="margin-top:48px" id="home">
+        <h1 class="w3-jumbo w3-text-blue">Bem-vindo à ECAFRIO</h1>
+        <p class="w3-xlarge w3-text-grey">O conforto que você precisa, a tecnologia que você confia.</p>
+        <img src="IMG/logo.jpg" alt="ECAFRIO - Climatização Premium" class="w3-image w3-margin-top" style="max-width:100%;height:auto;">
+        <hr>
+        
+        <div class="w3-row-padding w3-margin-top">
+            <div class="w3-quarter">
+                <div class="w3-card w3-white w3-padding w3-center">
+                    <i class="fa fa-history w3-xxlarge w3-text-blue"></i>
+                    <h3>Nossa História</h3>
+                    <p>Fundada em 2015, a ECAFRIO nasceu da paixão por ambientes saudáveis.</p>
+                </div>
+            </div>
+            <div class="w3-quarter">
+                <div class="w3-card w3-white w3-padding w3-center">
+                    <i class="fa fa-bullseye w3-xxlarge w3-text-blue"></i>
+                    <h3>Nossa Missão</h3>
+                    <p>Proporcionar bem-estar e eficiência energética.</p>
+                </div>
+            </div>
+            <div class="w3-quarter">
+                <div class="w3-card w3-white w3-padding w3-center">
+                    <i class="fa fa-star w3-xxlarge w3-text-blue"></i>
+                    <h3>Nossos Valores</h3>
+                    <p>Transparência, qualidade técnica e responsabilidade ambiental.</p>
+                </div>
+            </div>
+            <div class="w3-quarter">
+                <div class="w3-card w3-white w3-padding w3-center">
+                    <i class="fa fa-leaf w3-xxlarge w3-text-blue"></i>
+                    <h3>Sustentabilidade</h3>
+                    <p>Equipamentos com alta eficiência energética (Selos Procel A).</p>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="w3-container">
+            <h2>Por que escolher a ECAFRIO?</h2>
+            <div class="w3-row">
+                <div class="w3-col m6 w3-padding-large">
+                    <ul class="w3-ul w3-card-4 w3-white">
+                        <li class="w3-padding"><b>Instalação Certificada:</b> Técnicos treinados.</li>
+                        <li class="w3-padding"><b>Manutenção Preventiva:</b> Planos mensais.</li>
+                        <li class="w3-padding"><b>Garantia Estendida:</b> 1 ano na mão de obra.</li>
+                        <li class="w3-padding"><b>Atendimento 24h:</b> Suporte emergencial.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="w3-hide" style="margin:64px 0">
+
+    <!-- SEÇÃO: PARCEIROS -->
+    <div class="w3-container w3-padding-large" id="parceiros">
+        <h2 class="w3-text-blue">Nossos Parceiros</h2>
+        <p>Trabalhamos com as melhores marcas do mercado.</p>
+        
+        <div class="w3-row-padding w3-margin-top">
+            <!-- LG -->
+            <div class="w3-quarter w3-center w3-margin-bottom">
+                <h3>LG Electronics</h3>
+                <img src="IMG/lg-logo.png" alt="LG Electronics" class="w3-image w3-margin-top" style="max-width:100%; height: 60px; object-fit: contain;">
+            </div>
+            
+            <!-- Samsung -->
+            <div class="w3-quarter w3-center w3-margin-bottom">
+                <h3>Samsung</h3>
+                <img src="IMG/logo-sam.png" alt="Samsung" class="w3-image w3-margin-top" style="max-width:100%; height: 60px; object-fit: contain;">
+            </div>
+            
+            <!-- Daikin -->
+            <div class="w3-quarter w3-center w3-margin-bottom">
+                <h3>Daikin</h3>
+                <img src="IMG/logo-dai.png" alt="Daikin" class="w3-image w3-margin-top" style="max-width:100%; height: 60px; object-fit: contain;">
+            </div>
+            
+            <!-- Elgin -->
+            <div class="w3-quarter w3-center w3-margin-bottom">
+                <h3>Elgin</h3>
+                <img src="IMG/logo-elg.png" alt="Elgin" class="w3-image w3-margin-top" style="max-width:100%; height: 60px; object-fit: contain;">
+            </div>
+        </div>
+        <p class="w3-small w3-text-grey">*As marcas registradas pertencem aos seus respectivos donos.</p>
+    </div>
+
+    <hr class="w3-hide" style="margin:64px 0">
+    <!-- SEÇÃO: SERVIÇOS -->
+<div class="w3-container w3-padding-large" id="servicos">
+    <h2 class="w3-text-blue">Nossos Serviços</h2>
+    <p class="w3-text-grey">Conheça as principais soluções que oferecemos.</p>
+
+    <!-- Container do Slideshow -->
+    <div class="w3-content w3-section" style="max-width:500px; position: relative;">
+        
+        <!-- Imagens -->
+        <div>
+            <img class="slide" src="IMG/Ins_1.png" alt="Instalação de Ar Condicionado" style="width:100%; height: 300px; object-fit: cover; display: none;">
+            <img class="slide" src="IMG/Ins_2.png" alt="Manutenção Preventiva" style="width:100%; height: 300px; object-fit: cover; display: none;">
+            <img class="slide" src="IMG/Ins_3.png" alt="Limpeza de Dutos" style="width:100%; height: 300px; object-fit: cover; display: none;">
+        </div>
+
+        <!-- Container para sobrepor texto e controles -->
+        <div class="w3-container w3-padding-32 w3-center" style="background: rgba(0,0,0,0.4); border-radius: 8px; margin-top: 10px;">
+            <h3 id="slide-title" class="w3-text-white w3-large">Instalação Profissional</h3>
+            <p id="slide-desc" class="w3-text-white w3-small">Técnicos certificados instalando seu equipamento com segurança.</p>
+        </div>
+
+        <!-- Botões de Navegação -->
+        <a class="w3-button w3-white w3-round w3-margin-left w3-hover-black" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="w3-button w3-white w3-round w3-margin-right w3-hover-black" onclick="plusSlides(1)">&#10095;</a>
+        
+        <!-- Indicadores (Bolhas) -->
+        <div style="text-align:center; margin-top: 15px;">
+            <span class="dot w3-hover-opacity" onclick="currentSlide(1)"></span>
+            <span class="dot w3-hover-opacity" onclick="currentSlide(2)"></span>
+            <span class="dot w3-hover-opacity" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+</div>
+
+
+<script>
+// Dados dos slides (Título e Descrição)
+const slideData = [
+    { title: "Instalação Profissional", desc: "Técnicos certificados instalando seu equipamento com segurança." },
+    { title: "Manutenção Preventiva", desc: "Limpeza completa para aumentar a vida útil e eficiência." },
+    { title: "Limpeza de Dutos", desc: "Remoção de poeira e ácaros para um ar mais saudável." }
+];
+
+var slideIndex = 1;
+var slideInterval;
+var showSlides = function() {
+  var i;
+  var x = document.getElementsByClassName("slide");
+  var dots = document.getElementsByClassName("dot");
+  var title = document.getElementById("slide-title");
+  var desc = document.getElementById("slide-desc");
+
+  // Esconder todos
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+    x[i].style.opacity = "0";
+    if(dots[i]) dots[i].className = dots[i].className.replace(" active", "");
+  }
+  
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  
+  // Mostrar o atual
+  x[slideIndex-1].style.display = "block";
+  x[slideIndex-1].style.opacity = "1";
+  
+  // Atualizar texto
+  title.innerText = slideData[slideIndex-1].title;
+  desc.innerText = slideData[slideIndex-1].desc;
+  
+  if(dots[slideIndex-1]) dots[slideIndex-1].className += " active";
+}
+
+function plusSlides(n) {
+    clearInterval(slideInterval); // Pausa o automático ao clicar
+    slideIndex += n;
+    showSlides();
+    restartTimer();
+}
+
+function currentSlide(n) {
+    clearInterval(slideInterval);
+    slideIndex = n;
+    showSlides();
+    restartTimer();
+}
+
+function restartTimer() {
+    slideInterval = setInterval(showSlides, 3000); // 3 segundos
+}
+
+// Iniciar
+window.onload = function() {
+    // Garante que a primeira imagem e texto apareçam imediatamente
+    document.getElementsByClassName("slide").style.display = "block";
+    document.getElementsByClassName("slide").style.opacity = "1";
+    document.getElementById("slide-title").innerText = slideData.title;
+    document.getElementById("slide-desc").innerText = slideData.desc;
+    document.getElementsByClassName("dot").className += " active";
+    
+    // Inicia o loop
+    restartTimer();
+}
+</script>
+
+
+
+
+    <!-- SEÇÃO: FAQ -->
+    <div class="w3-container w3-padding-large" id="faq">
+        <h2 class="w3-text-blue">Perguntas Frequentes (FAQ)</h2>
+        <p>Dúvidas comuns sobre nossos serviços e produtos.</p>
+
+        <div class="w3-panel w3-leftbar w3-border-blue w3-light-grey w3-round-xlarge">
+            <h4>Qual a diferença entre ar Split e Inverter?</h4>
+            <p>O modelo <b>Inverter</b> economiza até 60% de energia.</p>
+        </div>
+
+        <div class="w3-panel w3-leftbar w3-border-blue w3-light-grey w3-round-xlarge">
+            <h4>Com que frequência devo fazer a limpeza?</h4>
+            <p>A cada <b>6 meses</b> para residencial e <b>3 meses</b> para corporativo.</p>
+        </div>
+
+        <div class="w3-panel w3-leftbar w3-border-blue w3-light-grey w3-round-xlarge">
+            <h4>Vocês fazem a instalação de aparelhos usados?</h4>
+            <p>Sim! Com avaliação técnica prévia.</p>
+        </div>
+
+        <div class="w3-panel w3-leftbar w3-border-blue w3-light-grey w3-round-xlarge">
+            <h4>Qual o prazo para atendimento?</h4>
+            <p>24 a 48 horas para programadas e 4 horas para emergências.</p>
+        </div>
+    </div>
+
+    <hr class="w3-hide" style="margin:64px 0">
+
+    <!-- SEÇÃO: CONTATO / RODAPÉ -->
+    <footer id="contato" class="w3-container w3-padding-32 w3-dark-grey w3-center">
+        <h3>Entre em Contato</h3>
+        <p>Precisa de um orçamento rápido? Chame a gente!</p>
+
+        <div class="w3-row-padding w3-margin-top" style="margin:0 -16px">
+            <div class="w3-third">
+                <span class="w3-xlarge"><i class="fa fa-map-marker"></i></span>
+                <p>Av. dos Climatizadores, 1000<br>São Paulo - SP</p>
+            </div>
+            <div class="w3-third">
+                <span class="w3-xlarge"><i class="fa fa-phone"></i></span>
+                <p>(11) 99999-8888</p>
+            </div>
+            <div class="w3-third">
+                <span class="w3-xlarge"><i class="fa fa-envelope"></i></span>
+                <p>contato@ecafrio.com.br</p>
+            </div>
+        </div>
+
+        <div class="w3-margin-top">
+            <a href="#" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-circle"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-circle"><i class="fa fa-instagram"></i></a>
+            <a href="#" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-circle"><i class="fa fa-whatsapp"></i></a>
+        </div>
+        <p class="w3-xlarge">ECAFRIO © 2026. Todos os direitos reservados.</p>
+    </footer>
+
+</div>
+
+<!-- Script para controle do Menu -->
+<script>
+// Função para abrir a sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+    
+    // Ajuste de margem no desktop ao abrir (caso a sidebar apareça sobre o conteúdo)
+    if (window.innerWidth > 600) {
+        document.getElementById("mySidebar").style.position = "fixed";
+        document.getElementById("mySidebar").style.left = "0";
+    }
+}
+
+// Função para fechar a sidebar
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+// Inicializa o estado correto ao carregar a página
+window.onload = function() {
+    if (window.innerWidth > 600) {
+        // No desktop, a sidebar deve estar visível e empurrando o conteúdo
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("mySidebar").style.position = "fixed";
+        document.getElementById("mySidebar").style.left = "0";
+        document.getElementById("mySidebar").style.top = "48px";
+        document.getElementById("mySidebar").style.bottom = "0";
+        document.getElementById("mySidebar").style.height = "100%";
+        document.getElementById("mySidebar").style.width = "250px";
+    } else {
+        // No mobile, a sidebar fica oculta e o conteúdo em 100%
+        document.getElementById("mySidebar").style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
