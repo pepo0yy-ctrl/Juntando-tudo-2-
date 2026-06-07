@@ -4,7 +4,7 @@ Este repositório contém o desenvolvimento de um site institucional completo pa
 ## 🎯 Objetivos de Aprendizado
 Ao analisar este código, o estudante deve ser capaz de compreender e aplicar:
 
-Estrutura Semântica HTML5: Uso correto de tags como <nav>, <section>, <footer>, <header> e atributos de acessibilidade (alt, aria-label).
+Estrutura Semântica HTML5: Uso correto de tags como nav, section, footer, header e atributos de acessibilidade (alt, aria-label).
 Responsividade com Frameworks: Como utilizar o framework W3.CSS para criar layouts que se adaptam a desktops e celulares (Media Queries e Grids).
 Manipulação do DOM com JavaScript: Criação de um Carrossel (Slideshow) dinâmico sem bibliotecas pesadas (apenas JavaScript puro).
 Separação de Camadas: Entendimento da distinção entre Estrutura (HTML), Estilização (CSS) e Comportamento (JS).
