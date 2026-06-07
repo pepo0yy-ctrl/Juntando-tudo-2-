@@ -11,9 +11,6 @@ Separação de Camadas: Entendimento da distinção entre Estrutura (HTML), Esti
 Debugging e Resolução de Problemas: Identificação de erros comuns de caminhos de arquivos (paths) e lógica de loop.
 
 
-## 🏗️ Arquitetura do Projeto
-O projeto segue uma estrutura simples, ideal para iniciantes:
-
 ## 📚 Tecnologias Utilizadas
 HTML5: Estrutura da página.
 CSS3 & W3.CSS: Estilização e responsividade (Framework educativo leve).
@@ -24,6 +21,8 @@ Font Awesome 4.7: Ícones vetoriais.
 Projeto desenvolvido para fins acadêmicos. Autor: [Pedro Henrique Oliveira de Abreu]
 
 
+## 🏗️ Arquitetura do Projeto
+O projeto segue uma estrutura simples, ideal para iniciantes:
 ```text
 /projeto-ecafrio
 │
